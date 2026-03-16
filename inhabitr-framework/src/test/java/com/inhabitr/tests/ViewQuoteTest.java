@@ -19,7 +19,10 @@ public class ViewQuoteTest extends BaseTest{
 	public void clickOnViewQuote() {
 		createNode("Quote view should be displayed");
 		myProjectsPage.viewProject();
+		viewQuotePage.toDuplicateProject();
 		viewQuotePage.toViewQuote();
+		
+		
 		childTest.pass("Quote viewed successfully");
 	}
 	

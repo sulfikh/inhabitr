@@ -32,6 +32,14 @@ public WebElement getViewQuote() {
 	wait.waitForVisibilityOfElement(viewQuote);
 	return viewQuote;
 }
+public WebElement getDuplicateProject() {
+	wait.waitForVisibilityOfElement(duplicateProject);
+	return duplicateProject;
+}
+
+public void toDuplicateProject() {
+	safeClick(duplicateProject);
+}
 
 public void toViewQuote() {
 	 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
