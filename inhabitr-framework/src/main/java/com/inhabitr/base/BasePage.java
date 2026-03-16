@@ -3,18 +3,11 @@ package com.inhabitr.base;
 import java.time.Duration;
 
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.inhabitr.pages.HomePage;
-import com.inhabitr.pages.LoginPage;
 import com.inhabitr.utils.ConfigReader;
 import com.inhabitr.utils.CustomWait;
 
