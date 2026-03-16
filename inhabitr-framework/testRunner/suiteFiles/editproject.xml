@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<listeners>
+		<listener class-name="com.inhabitr.customlisteners.TestListener" />
+	</listeners>
+	<test thread-count="1" name="Home Page Test">
+		<classes>
+			<class name="com.inhabitr.tests.HomePageTest" />
+		</classes>
+	</test>
+	<test thread-count="1" name="Login Page Test">
+		<classes>
+			<class name="com.inhabitr.tests.LoginPageTest" />
+		</classes>
+	</test>
+	<test thread-count="1" name="My Projects Page Test">
+		<classes>
+			<class name="com.inhabitr.tests.MyProjectsPageTest" />
+		</classes>
+	</test>
+	<test thread-count="1" name="Edit Project details Page Test">
+		<classes>
+			<class name="com.inhabitr.tests.AddProjectDetailsPageTest" />
+		</classes>
+	</test>
+</suite>

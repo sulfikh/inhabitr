@@ -34,6 +34,7 @@ public class BaseTest {
 	protected SignSalesOrderPage signSalesOrderPage;
 	protected EditProjectDetailsPage editProjectDetailsPage;
 	protected ConnectWithIHGsAIAgentPage connectWithIHGsAIAgentPage;
+	protected ViewQuotePage viewQuotePage;
 	
 
 	protected ConfigReader configReader;
@@ -81,6 +82,8 @@ public class BaseTest {
 		signSalesOrderPage = new SignSalesOrderPage(driver);
 		editProjectDetailsPage = new EditProjectDetailsPage(driver);
 		connectWithIHGsAIAgentPage = new ConnectWithIHGsAIAgentPage(driver);
+		viewQuotePage = new ViewQuotePage(driver);
+		
 	}
 
 	// ---------- CHILD NODE ----------
