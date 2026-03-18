@@ -16,12 +16,17 @@ public class ViewQuoteTest extends BaseTest{
 
 }
 	@Test
-	public void clickOnViewQuote() {
-		createNode("Quote view should be displayed");
-		myProjectsPage.viewProject();
-		viewQuotePage.toDuplicateProject();
-		viewQuotePage.toViewQuote();
+	public void clickOnViewQuote() throws InterruptedException {
 		
+		createNode("Quote view should be displayed");		
+		editProjectDetailsPage.searchProject(inputFileReader.getSearchProject());
+		myProjectsPage.viewProject();
+		viewQuotePage.toViewQuote();
+		viewQuotePage.toDownloadQuotes();
+		
+		
+		
+		//viewQuotePage.toDuplicateProject();	
 		
 		childTest.pass("Quote viewed successfully");
 	}
