@@ -90,10 +90,8 @@ public void toDownloadQuotes() {
 	    //safeClick(getDownloadQuote()); 
 	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 	    WebElement clickableElement = wait.until(ExpectedConditions.elementToBeClickable(getDownloadQuote()));
-	    safeClick(clickableElement);	  	    
-	    //Thread.sleep(10000);
-	    safeClick(getExcel());
-	   // Thread.sleep(10000);
+	    safeClick(clickableElement);		   
+	    safeClick(getExcel());	  
 	    safeClick(getPDF());
 	    
 }
