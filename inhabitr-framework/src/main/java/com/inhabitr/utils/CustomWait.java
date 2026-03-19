@@ -78,9 +78,8 @@ public class CustomWait {
 	    }
 	}
 
-	public void until(ExpectedCondition<WebElement> visibilityOf) {
-		// TODO Auto-generated method stub
-		
-	}
+
+	
+	
 
 }

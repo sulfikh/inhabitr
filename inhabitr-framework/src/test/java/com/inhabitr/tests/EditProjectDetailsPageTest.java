@@ -17,8 +17,9 @@ public class EditProjectDetailsPageTest extends BaseTest {
 
 	@Test
 	public void editProject() {
-		createNode("Open Edit Project Page");		
-		editProjectDetailsPage.editProject(inputFileReader.getSearchProject(), inputFileReader.getSelectMonth(),inputFileReader.getSelectYear());
+		createNode("Open Edit Project Page");	
+		editProjectDetailsPage.searchProject(inputFileReader.getSearchProject());
+		editProjectDetailsPage.editProject( inputFileReader.getSelectMonth(),inputFileReader.getSelectYear());
 		orderSummaryPage.clickEmailOrSave();
 		orderSummaryPage.viewSalesOrder();		
 		

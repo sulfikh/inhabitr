@@ -33,9 +33,7 @@ public class SignSalesOrderPageTest extends BaseTest{
 		signSalesOrderPage.clickReviewDocument();		
 		signSalesOrderPage.checkIframesPopup();
 		signSalesOrderPage.checkKeyboardAction();	
-		signSalesOrderPage.signOnSalesOrderAgreement();
-		
-		
+		signSalesOrderPage.signOnSalesOrderAgreement();	
 		
 		
 		

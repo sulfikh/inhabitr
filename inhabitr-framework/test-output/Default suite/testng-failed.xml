@@ -8,7 +8,7 @@
           <include name="flushReport"/>
           <include name="setupPage"/>
           <include name="baseSetup"/>
-          <include name="clickOnViewQuote"/>
+          <include name="deleteProject"/>
           <include name="setupReport"/>
           <include name="tearDown"/>
         </methods>

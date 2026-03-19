@@ -165,13 +165,14 @@ public class EditProjectDetailsPage extends BasePage{
 		return false;
 	}
 	
-
+public void searchProject(String search) {
+	getsearchTextBox().sendKeys(search);
 	
-	
+}
 
-	public void editProject(String search, String month, String year) {	
+	public void editProject( String month, String year) {	
 		
-		getsearchTextBox().sendKeys(search);//1
+		
 		safeClick(getEditProjectIcon());
 		
 		String currentURL = driver.getCurrentUrl();

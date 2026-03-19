@@ -159,7 +159,7 @@ public class MyProjectsPage extends BasePage {
 		System.out.println("Toast Message:" + getToastMessage());
 	}
 
-	public void viewProject() {
+	public void viewProject() {		
 		safeClick(viewProjectIcon());
 		//safeClick(backArrowIcon());
 	}

@@ -7,6 +7,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.inhabitr.utils.ConfigReader;
 import com.inhabitr.utils.CustomWait;
@@ -90,17 +92,33 @@ public class BasePage {
 	public void refreshPage() {
 		driver.navigate().refresh();
 	}
+//	protected void safeClick(WebElement element) {
+//	    try {
+//	        wait.waitForElementToBeClickable(element);
+//	        ((JavascriptExecutor) driver)
+//	                .executeScript("arguments[0].scrollIntoView({block:'center'});", element);
+//	        element.click();
+//	    } catch (Exception e) {
+//	        ((JavascriptExecutor) driver)
+//	                .executeScript("arguments[0].click();", element);
+//	    }
+//	}
 	protected void safeClick(WebElement element) {
 	    try {
-	        wait.waitForElementToBeClickable(element);
+	        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+	        wait.until(ExpectedConditions.elementToBeClickable(element));
+	        
 	        ((JavascriptExecutor) driver)
-	                .executeScript("arguments[0].scrollIntoView({block:'center'});", element);
+	            .executeScript("arguments[0].scrollIntoView({block:'center'});", element);
+	        
 	        element.click();
 	    } catch (Exception e) {
+	        // Fallback to JS click if normal click fails
 	        ((JavascriptExecutor) driver)
-	                .executeScript("arguments[0].click();", element);
+	            .executeScript("arguments[0].click();", element);
 	    }
 	}
+
 	
 	public void displayMenu()
 	{
@@ -129,4 +147,6 @@ public class BasePage {
 		displayMenu();
 		safeClick(btnCloseMenu());
 	}
+	
+	
 }

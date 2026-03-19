@@ -80,10 +80,10 @@ public class SignSalesOrderPage extends BasePage{
 		wait.waitForVisibilityOfElement(continueBtn);
 		return continueBtn;
 	}
-	
-	 public void waitForPopup() {
-	        wait.until(ExpectedConditions.visibilityOf(checkAgreement));
-	    }
+//	
+//	 public void waitForPopup() {
+//	        wait.until(ExpectedConditions.visibilityOf(checkAgreement));
+//	    }
 	 public WebElement getProceedtoProjects() {
 		 wait.waitForVisibilityOfElement(proceedtoProjects);
 		 return proceedtoProjects;
